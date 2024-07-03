@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmidowl0jj4re"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_3ggs4"]
+[ext_resource type="Texture2D" uid="uid://dhi4bl3ki8a2s" path="res://assets/Hauptmenü Background diesmal wirklich.png" id="2_mlypk"]
+
+[sub_resource type="SystemFont" id="SystemFont_l5pxv"]
+font_names = PackedStringArray("Impact")
+font_weight = 900
+oversampling = 6.3
+
+[sub_resource type="LabelSettings" id="LabelSettings_r5vv8"]
+font = SubResource("SystemFont_l5pxv")
+font_size = 42
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_eajeg"]
+font_names = PackedStringArray("Impact")
+oversampling = 10.0
+
+[sub_resource type="SystemFont" id="SystemFont_oxka5"]
+font_names = PackedStringArray("Impact")
+oversampling = 10.0
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ggs4")
+
+[node name="background" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mlypk")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -150.0
+offset_right = 180.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "2D PIXEL PLATFORMER"
+label_settings = SubResource("LabelSettings_r5vv8")
+
+[node name="play_game" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(165, 38)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_eajeg")
+theme_override_font_sizes/font_size = 24
+text = "Play Game"
+
+[node name="fullscreen" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(165, 38)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_oxka5")
+theme_override_font_sizes/font_size = 24
+text = "Fullscreen"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(165, 38)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_eajeg")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/play_game" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/fullscreen" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
