@@ -1,9 +1,11 @@
 Credits:
 
 
-DevWorm: Enemy inkl. Combat System https://www.youtube.com/watch?v=9u59U-DWNJs&list=PL3cGrGHvkwn0zoGLoGorwvGj6dHCjLaGd&index=5
+DevWorm: Enemy inkl. Combat System https://www.youtube.com/watch?v=9u59U-DWNJs&list=PL3cGrGHvkwn0zoGLoGorwvGj6dHCjLaGd&index=5 
 
-Brett Makes Games: Einstieg und Grundlagen https://www.youtube.com/watch?v=FNEAJsry5sA
+Brett Makes Games: Einstieg und Grundlagen https://www.youtube.com/watch?v=FNEAJsry5sA 
+
+Coding Quests: https://www.youtube.com/@CodingQuests 
 
 ChatGPT
 
