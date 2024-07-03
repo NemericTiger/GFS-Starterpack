@@ -1,5 +1,3 @@
 res://scenes/main_menu.tscn
-res://scripts/main_menu.gd
 res://scenes/level_01.tscn
 res://scenes/player.tscn
-res://scripts/level_01.gd
